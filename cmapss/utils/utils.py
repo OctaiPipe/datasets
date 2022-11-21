@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def clean_train_dataf(df, rejected_features):
+def clean_train_dataf(df, rejected_features=None):
     def add_train_RUL(grp):
         # Apply clipping to RUL based on uptime
         grp['RUL'] = (grp['uptime'].max() - grp['uptime'] + 1)
@@ -9,12 +9,19 @@ def clean_train_dataf(df, rejected_features):
         grp['RUL'].clip(upper=125, inplace=True)
         return grp
 
-    return (df
-             .drop(columns=rejected_features)
-             .sort_values(by=['machine_number', 'uptime'], axis=0)
-             .groupby('machine_number', group_keys=True)
-             .apply(add_train_RUL)
-            )
+    if rejected_features is None:
+        return (df
+                 .sort_values(by=['machine_number', 'uptime'], axis=0)
+                 .groupby('machine_number', group_keys=True)
+                 .apply(add_train_RUL)
+                )
+    else:
+        return (df
+                 .drop(columns=rejected_features)
+                 .sort_values(by=['machine_number', 'uptime'], axis=0)
+                 .groupby('machine_number', group_keys=True)
+                 .apply(add_train_RUL)
+                )
 
 def encode_rul(df,
                bins=[1, 40, 80, 125],
@@ -27,19 +34,26 @@ def encode_rul(df,
             )
 
 
-def clean_test_dataf(df, rejected_features):
+def clean_test_dataf(df, rejected_features=None):
     def add_test_RUL(grp):
         grp['RUL'] += grp['uptime'].max() - grp['uptime']
         # Apply clipping to RUL
         grp['RUL'].clip(upper=125, inplace=True)
         return grp
 
-    return (df
-             .drop(columns=rejected_features)
-             .sort_values(['machine_number', 'uptime'], axis=0)
-             .groupby('machine_number', group_keys=True)
-             .apply(add_test_RUL)
-            )
+    if rejected_features is None:
+        return (df
+                 .sort_values(['machine_number', 'uptime'], axis=0)
+                 .groupby('machine_number', group_keys=True)
+                 .apply(add_test_RUL)
+                )
+    else:
+        return (df
+                 .drop(columns=rejected_features)
+                 .sort_values(['machine_number', 'uptime'], axis=0)
+                 .groupby('machine_number', group_keys=True)
+                 .apply(add_test_RUL)
+                )
 
 def scale_train_dataf(df):
     from sklearn.preprocessing import MinMaxScaler
@@ -146,3 +160,10 @@ def shape_dataframe_to_sequence(df, num_lags):
             subcycles.append(subcycle)
 
     return subcycles, rul
+
+def get_rejected_features(filename='./data/rejected_features.txt'):
+    import os
+    if os.path.exists(filename):
+        # Check if has feature selection has been done and load the file
+        with open(filename, 'r') as f:
+            return f.read().splitlines()
