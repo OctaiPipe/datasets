@@ -48,10 +48,15 @@ _LICENSE = ""
 # TODO: Add link to the official dataset URLs here
 # The HuggingFace Datasets library doesn't host the datasets but only points to the original files.
 # This can be an arbitrary nested dict/list of URLs (see below in `_split_generators` method)
-_URLS = {
-    "FD001": "./data/RUL_FD001.txt",
-    "FD002": "./data/RUL_FD002.txt",
-}
+_URLS = "./interim"
+# _URLS = {
+#     "FD001": "./data/interim/FD001",
+#     "FD002": "./data/interim/FD002",
+# }
+# _URLS = {
+#     "FD001": "./interim/train_FD001.csv",
+#     "FD002": "./interim/train_FD002.csv",
+# }
 
 
 # TODO: Name of the dataset usually matches the script name with CamelCase instead of snake_case
@@ -124,14 +129,18 @@ class Cmapss(datasets.GeneratorBasedBuilder):
         # dl_manager is a datasets.download.DownloadManager that can be used to download and extract URLS
         # It can accept any type or nested list/dict and will give back the same structure with the url replaced with path to local files.
         # By default the archives will be extracted and a path to a cached folder where they are extracted is returned instead of the archive
-        urls = _URLS[self.config.name]
-        data_dir = dl_manager.download_and_extract(urls)
+        # urls = _URLS[self.config.name]
+        # data_dir = dl_manager.download_and_extract(urls)
+        data_dir = _URLS
         return [
             datasets.SplitGenerator(
                 name=datasets.Split.TRAIN,
                 # These kwargs will be passed to _generate_examples
                 gen_kwargs={
-                    "filepath": data_dir,
+                    "filepath": os.path.join(
+                        data_dir,
+                        f"train_{self.config.name}.csv"
+                    ),
                     "split": "train",
                 },
             ),
@@ -144,14 +153,17 @@ class Cmapss(datasets.GeneratorBasedBuilder):
             #         "split": "dev",
             #     },
             # ),
-            # datasets.SplitGenerator(
-            #     name=datasets.Split.TEST,
-            #     # These kwargs will be passed to _generate_examples
-            #     gen_kwargs={
-            #         "filepath": os.path.join(data_dir, "test.jsonl"),
-            #         "split": "test"
-            #     },
-            # ),
+            datasets.SplitGenerator(
+                name=datasets.Split.TEST,
+                # These kwargs will be passed to _generate_examples
+                gen_kwargs={
+                    "filepath": os.path.join(
+                        data_dir,
+                        f"test_{self.config.name}.csv"
+                    ),
+                    "split": "test"
+                },
+            ),
         ]
 
     # method parameters are unpacked from `gen_kwargs` as given in `_split_generators`
