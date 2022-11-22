@@ -1,4 +1,0 @@
-datasets
-scikit-learn
-tensorflow-cpu
-matplotlib

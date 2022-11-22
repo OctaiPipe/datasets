@@ -1,0 +1,21 @@
+-r common.txt
+
+# data manipulation
+pandas
+# pandas-profiling
+# fastparquet
+
+# plotting
+matplotlib
+
+# ide
+jupyterlab
+ipywidgets
+
+# machine learning
+scikit-learn
+tensorflow-cpu
+
+# housekeeping
+nbstripout
+pytest
