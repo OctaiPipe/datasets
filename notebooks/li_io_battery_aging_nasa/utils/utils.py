@@ -228,3 +228,34 @@ def convert_data_csv(
                 error_files.append(filepath)
 
     print(error_files)
+
+
+def add_RUL(df,
+            time_column='time',
+            piecewise=True,
+            initial_RUL=1000000.):
+    '''
+    Add Remaining-Useful-Life (RUL) target label using the time_column of df
+
+    Args:
+        df (pd DataFrame): must contain time_column
+        time_column (str): time colume in df with which to construct RUL label
+        piecewise (bool): if True, construct piecewise-linear RUL, otherwise
+        construct linear RUL.
+        Defaults to True
+        initial_RUL (float): initial RUL if piecewise.
+        Defaults to 1000000.
+    Returns:
+
+    '''
+    if time_column not in df.columns:
+        raise KeyError(f"df does not contain '{time_column}' column")
+
+    df_ = df.copy()
+    rul = (df_[time_column].max() - df_[time_column])
+
+    if piecewise:
+        rul = np.minimum(rul, initial_RUL)
+
+    df_['RUL'] = rul
+    return df_
