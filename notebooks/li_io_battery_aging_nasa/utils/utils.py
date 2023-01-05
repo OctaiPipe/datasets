@@ -53,7 +53,7 @@ def load_charge(cycles):
             for name in data.dtype.names:
                 data_dict[name] = data[name][0, 0].T.squeeze()[i]
 
-                cycles_dict.append(data_dict)
+            cycles_dict.append(data_dict)
 
     return cycles_dict
 
@@ -95,7 +95,7 @@ def load_discharge(cycles):
                 else:
                     pass
 
-                cycles_dict.append(data_dict)
+            cycles_dict.append(data_dict)
         if missing_apacity:
             print(f"Cycle {n} has missing Capacity")
 
@@ -132,12 +132,13 @@ def load_impedance(cycles):
                 if name not in ['Re', 'Rct', 'Rectified_Impedance']:
                     data_dict[name] = data[name][0, 0].T.squeeze()[i]
 
-                cycles_dict.append(data_dict)
+            cycles_dict.append(data_dict)
 
     return cycles_dict
 
 
-def load_cycles_to_df(cycles):
+def load_cycles_to_df(cycles,
+                      skip_charge_cycles: bool = False):
     '''
     Load charge, discharge, impedance measurement cycles from a given file
     into separate pd DataFrames
@@ -145,13 +146,85 @@ def load_cycles_to_df(cycles):
         cycles (structured np array): np array
         storing data from the charge, discharge,
         impedance measurement cycles
+        skip_charge_cycles (bool): whether to skip the charge cycles
+        (the resulting csv files are a bit larger).
+        Defaults to False
     Returns:
         df_charge_cycles, df_discharge_cycles, df_impedance_cycles
-        (pd DataFrames)
+        (pd DataFrames). df_charge_cycles is None if skip_charge_cycles
     '''
+    if skip_charge_cycles:
+        df_charge_cycles = None
+    else:
+        df_charge_cycles = pd.DataFrame.from_dict(load_charge(cycles))
+        df_charge_cycles = df_charge_cycles.drop_duplicates()
 
-    df_charge_cycles = pd.DataFrame.from_dict(load_charge(cycles))
     df_discharge_cycles = pd.DataFrame.from_dict(load_discharge(cycles))
     df_impedance_cycles = pd.DataFrame.from_dict(load_impedance(cycles))
+    df_discharge_cycles = df_discharge_cycles.drop_duplicates()
+    df_impedance_cycles = df_impedance_cycles.drop_duplicates()
 
     return df_charge_cycles, df_discharge_cycles, df_impedance_cycles
+
+
+def convert_data_csv(
+        raw_dataset_folder='../../li_ion_battery_aging_nasa/data/raw/',
+        processed_folder='../../li_ion_battery_aging_nasa/data/processed',
+        skip_charge_cycles: bool = False
+):
+    '''
+    Load all raw mat data files from folder and convert them to csv files,
+    one for each type of cycle. The output csv files have names of form
+    <battery_number>_<cycle>.csv
+
+    Args:
+        raw_dataset_folder (str)
+        processed_folder (str)
+        skip_charge_cycles (bool): whether to skip the charge cycles
+        (the resulting csv files are a bit larger)
+        Defaults to False
+    Returns:
+
+    '''
+
+    error_files = []
+    for sub_folder in os.listdir(raw_dataset_folder):
+        sub_folder_path = os.path.join(raw_dataset_folder, sub_folder)
+        processed_dataset_sub_folder = os.path.join(
+            processed_folder, sub_folder)
+        os.makedirs(processed_dataset_sub_folder, exist_ok=True)
+        mat_files = os.listdir(sub_folder_path)
+        mat_files = [
+            file for file in mat_files if file.split('.')[-1] == 'mat']
+
+        for mat_file in mat_files:
+            filename = mat_file.split('.')[0]
+            filepath = os.path.join(sub_folder_path, mat_file)
+            print(f'Processing {filepath}')
+            try:
+                df_charge_cycles, df_discharge_cycles, df_impedance_cycles = \
+                    load_cycles_to_df(
+                        load_mat_to_np(filepath),
+                        skip_charge_cycles)
+
+                if not skip_charge_cycles:
+                    df_charge_cycles.to_csv(
+                        os.path.join(processed_dataset_sub_folder,
+                                     filename + '_charge.csv'),
+                        index=False)
+
+                df_discharge_cycles.to_csv(
+                    os.path.join(processed_dataset_sub_folder,
+                                 filename + '_discharge.csv'),
+                    index=False)
+
+                df_impedance_cycles.to_csv(
+                    os.path.join(processed_dataset_sub_folder,
+                                 filename + '_impedance.csv'),
+                    index=False)
+
+            except Exception as e:
+                print(e)
+                error_files.append(filepath)
+
+    print(error_files)
