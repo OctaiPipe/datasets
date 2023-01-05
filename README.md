@@ -1,3 +1,5 @@
 # Repository of datasets used for DS experiments
 
 1. CMAPSS datasets was originally downloaded from [`data.nasa.gov`](https://data.nasa.gov/dataset/C-MAPSS-Aircraft-Engine-Simulator-Data/xaut-bemq) but has since been redacted. For our purposes, it is now hosted in this repository.
+
+2. Li-Ion Battery Aging Dataset, downloaded from [`NASA Prognostics Center of Excellence data-set repository`](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository). For our purposes, it is now hosted in this repository. Each battery undergoes repeated charging and dischaging cycles. For each discharge cycle, the battery capacity is measured; this can be treated as similar to the canvolution dataset. As said in the original description in the dataset, 'this dataset can be used for the prediction of both remaining charge (for a given discharge cycle) and remaining useful life (RUL).'
