@@ -1,2 +1,2 @@
-datasets
+datasets==2.10.1
 typer[all]==0.7.0
