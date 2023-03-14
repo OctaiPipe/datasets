@@ -8,11 +8,11 @@
 #   - Join test target labels to test set.
 #   - Clip maximum RUL values to 125, cf. Li et al.
 #     (https://doi.org/10.1016/j.ress.2017.11.021)
-# 
+#
 # This script does not:
 #   - Drop columns, rescale/manipulate features, perform feature selection
 #   - Quantise target labels (for classification problem)
-# 
+#
 # Usage:
 #   $ ./preprocess_data.py --dataset-id FD001
 #
