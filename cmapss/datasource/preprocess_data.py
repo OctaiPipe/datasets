@@ -4,7 +4,7 @@
 # is to generate *.csv files that is compatible for the `datasets` package.
 #
 # This script will:
-#   - Read *.txt and write to *.csv
+#   - Read *.txt and write to *.tar.gz
 #   - Join test target labels to test set.
 #   - Clip maximum RUL values to 125, cf. Li et al.
 #     (https://doi.org/10.1016/j.ress.2017.11.021)
@@ -17,11 +17,11 @@
 #   $ ./preprocess_data.py --dataset-id FD001
 #
 # Created by: CSN
-# Last modified: 22/11/2022
+# Last modified: 15/3/2023
 
 import typer
 import pandas as pd
-import os
+from ydata_profiling import ProfileReport
 
 app = typer.Typer()
 
@@ -74,29 +74,40 @@ def main(
     df_test = df_test.join(y_test.set_index("machine_number"),
                            on="machine_number")
 
+    # User profiler to detect poor features
+    profile = ProfileReport(df_train, minimal=True)
+    rejected_features = list(profile.get_rejected_variables())
+    rejected_feature_fname = f"../rejected_features_{dataset_id}.txt"
+    with open(rejected_feature_fname, 'w') as f:
+        for feature in rejected_features:
+            f.write(f"{feature}\n")
+
+    # Save files
     print(f"Saving files for {dataset_id}")
+
     (df_train
       .sort_values(by=["machine_number", "uptime"], axis=0)
       .groupby("machine_number", group_keys=True)
       .apply(add_train_RUL)
-    ).to_csv(f"./interim/train_{dataset_id}.tar.gz", index=False)
+    ).to_csv(f"../train_{dataset_id}.tar.gz", index=False)
 
     (df_test
       .sort_values(["machine_number", "uptime"], axis=0)
       .groupby("machine_number", group_keys=True)
       .apply(add_test_RUL)
-    ).to_csv(f"./interim/test_{dataset_id}.tar.gz", index=False)
+    ).to_csv(f"../test_{dataset_id}.tar.gz", index=False)
+
     print(f"Completed saving files for {dataset_id}")
 
-    os.link(f"./interim/train_{dataset_id}.tar.gz",
-            f"../train_{dataset_id}.tar.gz")
-    os.link(f"./interim/test_{dataset_id}.tar.gz",
-            f"../test_{dataset_id}.tar.gz")
+    # os.link(f"./interim/train_{dataset_id}.tar.gz",
+    #         f"../train_{dataset_id}.tar.gz")
+    # os.link(f"./interim/test_{dataset_id}.tar.gz",
+    #         f"../test_{dataset_id}.tar.gz")
 
     # Estimate the rejected features from ydata-profiler.
     # The features are not removed from the dataframe, only saved to file.
-    os.link(f"./interim/rejected_features_{dataset_id}.txt",
-            f"../rejected_features_{dataset_id}.txt")
+    # os.link(f"./interim/rejected_features_{dataset_id}.txt",
+    #         f"../rejected_features_{dataset_id}.txt")
 
     return
 
