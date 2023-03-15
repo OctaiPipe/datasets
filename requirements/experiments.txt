@@ -2,11 +2,11 @@
 
 # data manipulation
 pandas~=1.5.3
-# pandas-profiling
+ydata-profiling~=4.1.0
 # fastparquet
 
 # plotting
-matplotlib~=3.7.1
+matplotlib<3.7
 
 # ide
 jupyterlab~=3.6.1

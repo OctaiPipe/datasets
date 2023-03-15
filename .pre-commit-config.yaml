@@ -15,7 +15,7 @@ repos:
       - id: trailing-whitespace
         exclude: ^notebooks/figures/
       - id: check-added-large-files
-        args: ['--maxkb=1024']
+        args: ['--maxkb=3072']
       - id: detect-private-key
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.6.3

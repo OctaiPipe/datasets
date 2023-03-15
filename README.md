@@ -1,5 +1,9 @@
 # Repository of datasets used for DS experiments
 
+## Usage
+1. The purpose of this repository is to host T-DAB datasets and any accompanying scripts used to prepare the data for an ML use case.
+2. It should not contain any experimentation notebooks. For this, a separate repo ML-experiments have been created.
+
 ## Create Environment
 Set up a working miniconda environment as follows:
 ``` bash
