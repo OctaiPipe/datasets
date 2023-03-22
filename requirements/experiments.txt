@@ -14,6 +14,8 @@ ipywidgets~=8.0.4
 
 # machine learning
 scikit-learn~=1.2.1
+xgboost
+lightgbm
 tensorflow-cpu~=2.11.0
 
 # housekeeping

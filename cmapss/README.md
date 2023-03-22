@@ -14,10 +14,10 @@
 There are 2 methods. The first clones the specific datasource that you need. The second creates a submodule that points to a commit in this `datasets` repository.
 
 ### Method 1
+Install the `datasets` repository as a submodule in your working repository. An example is provided in the [`README`](https://github.com/The-Data-Analysis-Bureau/ml-experiments#readme) of [`ml-experiments`](https://github.com/The-Data-Analysis-Bureau/ml-experiments) repository.
+
+### Method 2
 Start by cloning the datasource that you need. Here is a single-line command that you can copy into your shell and checkout the datasource.
 ``` bash
 git clone --depth=1 https://github.com/The-Data-Analysis-Bureau/datasets.git && mv datasets/cmapss . && rm -rf datasets datasets/datasource
 ```
-
-### Method 2
-> **Note** WIP
