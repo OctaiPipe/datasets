@@ -74,31 +74,31 @@ def add_lagged_vars(df, num_lags, columns_not_lagged):
     Takes a time-series dataframe and appends lagged variables
     using DataFrame.shift().
     '''
-    
+
     # take a copy of the dataframe
-    df_copy = df.copy() 
-    
+    df_copy = df.copy()
+
     # drop the columns that are not to be lagged
     for column in columns_not_lagged:
         df_copy.drop(column, inplace=True, axis=1)
-    
+
     # get list of shifted dataframes
     shifted_dfs = []
     for i in range(1, num_lags+1):
         shifted_df = df_copy.shift(i)
         shifted_df.columns = [f'{name}_tm{i:02}' for name in df_copy.columns]
         shifted_dfs.append(shifted_df)
-        
+
     # concatenate all the shifted dfs horizontally
     new_df = pd.concat(shifted_dfs, axis=1)
 
     # now join the original df to the new df
     final_df = pd.concat([df, new_df], axis=1)
-    
+
     # drop rows with nans created from shifting and reset the index
     final_df.dropna(inplace=True)
     final_df.reset_index(inplace=True, drop=True)
-    
+
     return final_df
 
 def lag_dataframe(df, num_lags):
@@ -106,23 +106,23 @@ def lag_dataframe(df, num_lags):
     Goes through data for each engine unit, and adds lagged variables
     with add_lagged_vars function.
     '''
-    
+
     # get the number of engine units
     num_units = df['machine_number'].iloc[-1]
-    
+
     cols_not_lagged = ['machine_number', 'RUL']
-    
+
     lagged_dfs = []
     for unit in range(1, num_units+1):
         # get the data of the current unit
         unit_df = df.loc[df['machine_number'] == unit]
-        
+
         # add on lagged variables
         unit_df_lagged = add_lagged_vars(unit_df, num_lags, cols_not_lagged)
         lagged_dfs.append(unit_df_lagged)
 
-    df_lagged = pd.concat(lagged_dfs, axis=0) 
-    
+    df_lagged = pd.concat(lagged_dfs, axis=0)
+
     return df_lagged
 
 def shape_dataframe_to_sequence(df, num_lags):

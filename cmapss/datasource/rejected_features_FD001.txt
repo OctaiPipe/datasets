@@ -1,0 +1,13 @@
+sensor_16
+sensor_18
+sensor_10
+sensor_01
+setting_3
+sensor_05
+sensor_19
+setting_1
+setting_2
+sensor_06
+sensor_22
+sensor_23
+sensor_24

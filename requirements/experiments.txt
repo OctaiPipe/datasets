@@ -1,23 +1,28 @@
 -r common.txt
 
 # data manipulation
-pandas
-# pandas-profiling
+pandas~=1.5.3
+ydata-profiling~=4.1.0
 # fastparquet
 
 # plotting
-matplotlib
+matplotlib<3.7
 
 # ide
-jupyterlab
-ipywidgets
+jupyterlab~=3.6.1
+ipywidgets~=8.0.4
 
 # machine learning
-scikit-learn
+scikit-learn~=1.2.1
 xgboost
 lightgbm
-tensorflow-cpu
+tensorflow-cpu~=2.11.0
 
 # housekeeping
 nbstripout
+nbqa
+isort
 pytest
+
+# commit checks
+pre-commit==3.1.1
