@@ -15,4 +15,36 @@ It has a shape of 2686843 rows × 11 columns
 The table in images_and_categories_per_users.csv contains one row per users, and the aggregation of: the total number of images the user has taken, and the distinct number of phylums, classes and orders and species.
 Its size is 158873 rows × 6 columns
 
-The data is located here: storageexplorer://?v=2&tenantId=9485acfb-a348-4a74-8408-be47f710df4b&container=inaturalist&type=fileSystem&serviceEndpoint=https%3A%2F%2Foctaipipedatasets.dfs.core.windows.net%2F&subscriptionId=0376d230-c884-4b5d-80b2-6759120231fc&storageAccountId=%2Fsubscriptions%2F0376d230-c884-4b5d-80b2-6759120231fc%2FresourceGroups%2FOctaipipe%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Foctaipipedatasets
+These two tables have been stored in the blob storage, and can be downloaded as such in Python: 
+```python
+from azure.storage.blob import BlobServiceClient
+
+# Replace these values with your information
+connection_string = "BlobEndpoint=https://octaipipedatasets.blob.core.windows.net/;QueueEndpoint=https://octaipipedatasets.queue.core.windows.net/;FileEndpoint=https://octaipipedatasets.file.core.windows.net/;TableEndpoint=https://octaipipedatasets.table.core.windows.net/;SharedAccessSignature=sv=2022-11-02&ss=b&srt=sco&sp=rl&se=2025-09-01T22:55:57Z&st=2024-08-16T14:55:57Z&spr=https&sig=bVnZQ31gYb13mqvaEvWAchc4qwzgR77zwJmWIkp8Uy0%3D"
+container_name = "inaturalist"
+blob_name = "2021/training_images_and_categories_per_users.csv"
+download_file_path = "training_images_and_categories_per_users.csv"
+
+# Create the BlobServiceClient object
+blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+
+# Get the container client
+container_client = blob_service_client.get_container_client(container_name)
+
+# Get the blob client
+blob_client = container_client.get_blob_client(blob_name)
+
+try:
+    # Download the blob to a local file
+    with open(download_file_path, "wb") as download_file:
+        download_file.write(blob_client.download_blob().readall())
+    print(f"Downloaded blob {blob_name} to {download_file_path}")
+
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+
+
+
+
+
