@@ -5,8 +5,8 @@ It was used in this paper for [FL Federated Visual Classification with Real-Worl
 ## Information about the dataset
 The training set contains 2,686,843 images, from 158,873 users.
 
-There are 10,000 categories (=species), but thanks to phylogeny (the architectural organisation of all living organisms), we can naturally group categories together. Yes: Biology is amazing!  
-So there are 13 phylums, 51 classes, 1103 families, which are likely to be the most useful to us. This allows us to reduce the umber of "classes" without having to exclude any images.
+There are 10,000 species, but thanks to phylogeny (the hierarchical organisation of all living organisms), we can naturally group categories together. Yes: Biology is amazing!  
+So there are 13 phylums, 51 classes, 1103 families, which are likely to be the most useful to us. This allows us to reduce the number of categories without having to exclude any images.
 
 ## Metadata available
 The raw metadata is stored in the json files, and has been processed into several csv files for our own convenience. All files can be found in the blob storage (see below how to access)
