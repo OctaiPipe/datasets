@@ -1,0 +1,893 @@
+[
+    {
+        "raw_filename": "0.5X_B_20Hz.xls",
+        "raw_data_path": "./data/0.5X_B_20Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "20Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_25Hz.xls",
+        "raw_data_path": "./data/0.5X_B_25Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "25Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_30Hz.xls",
+        "raw_data_path": "./data/0.5X_B_30Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "30Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_35Hz.xls",
+        "raw_data_path": "./data/0.5X_B_35Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "35Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_40Hz.xls",
+        "raw_data_path": "./data/0.5X_B_40Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "40Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_60Hz.xls",
+        "raw_data_path": "./data/0.5X_B_60Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "60Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_65Hz.xls",
+        "raw_data_path": "./data/0.5X_B_65Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "65Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_70Hz.xls",
+        "raw_data_path": "./data/0.5X_B_70Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "70Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_75Hz.xls",
+        "raw_data_path": "./data/0.5X_B_75Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "75Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_80Hz.xls",
+        "raw_data_path": "./data/0.5X_B_80Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "80Hz",
+        "fault_label": "M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_B_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/0.5X_B_VS_0_40_0Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "B",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_M_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_20Hz.xls",
+        "raw_data_path": "./data/0.5X_C_20Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "20Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_25Hz.xls",
+        "raw_data_path": "./data/0.5X_C_25Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "25Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_30Hz.xls",
+        "raw_data_path": "./data/0.5X_C_30Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "30Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_35Hz.xls",
+        "raw_data_path": "./data/0.5X_C_35Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "35Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_40Hz.xls",
+        "raw_data_path": "./data/0.5X_C_40Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "40Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_60Hz.xls",
+        "raw_data_path": "./data/0.5X_C_60Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "60Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_65Hz.xls",
+        "raw_data_path": "./data/0.5X_C_65Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "65Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_70Hz.xls",
+        "raw_data_path": "./data/0.5X_C_70Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "70Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_75Hz.xls",
+        "raw_data_path": "./data/0.5X_C_75Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "75Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_80Hz.xls",
+        "raw_data_path": "./data/0.5X_C_80Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "80Hz",
+        "fault_label": "M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_C_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/0.5X_C_VS_0_40_0Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "C",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_M_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_20Hz.xls",
+        "raw_data_path": "./data/0.5X_I_20Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "20Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_25Hz.xls",
+        "raw_data_path": "./data/0.5X_I_25Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "25Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_30Hz.xls",
+        "raw_data_path": "./data/0.5X_I_30Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "30Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_35Hz.xls",
+        "raw_data_path": "./data/0.5X_I_35Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "35Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_40Hz.xls",
+        "raw_data_path": "./data/0.5X_I_40Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "40Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_60Hz.xls",
+        "raw_data_path": "./data/0.5X_I_60Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "60Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_65Hz.xls",
+        "raw_data_path": "./data/0.5X_I_65Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "65Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_70Hz.xls",
+        "raw_data_path": "./data/0.5X_I_70Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "70Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_75Hz.xls",
+        "raw_data_path": "./data/0.5X_I_75Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "75Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_80Hz.xls",
+        "raw_data_path": "./data/0.5X_I_80Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "80Hz",
+        "fault_label": "M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_I_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/0.5X_I_VS_0_40_0Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "I",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_M_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_20Hz.xls",
+        "raw_data_path": "./data/0.5X_O_20Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "20Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_25Hz.xls",
+        "raw_data_path": "./data/0.5X_O_25Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "25Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_30Hz.xls",
+        "raw_data_path": "./data/0.5X_O_30Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "30Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_35Hz.xls",
+        "raw_data_path": "./data/0.5X_O_35Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "35Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_40Hz.xls",
+        "raw_data_path": "./data/0.5X_O_40Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "40Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_60Hz.xls",
+        "raw_data_path": "./data/0.5X_O_60Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "60Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_65Hz.xls",
+        "raw_data_path": "./data/0.5X_O_65Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "65Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_70Hz.xls",
+        "raw_data_path": "./data/0.5X_O_70Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "70Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_75Hz.xls",
+        "raw_data_path": "./data/0.5X_O_75Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "75Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_80Hz.xls",
+        "raw_data_path": "./data/0.5X_O_80Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "80Hz",
+        "fault_label": "M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "0.5X_O_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/0.5X_O_VS_0_40_0Hz.xls",
+        "fault_severity": "medium",
+        "fault_location": "O",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_M_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_20Hz.xls",
+        "raw_data_path": "./data/B_20Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "20Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_25Hz.xls",
+        "raw_data_path": "./data/B_25Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "25Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_30Hz.xls",
+        "raw_data_path": "./data/B_30Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "30Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_35Hz.xls",
+        "raw_data_path": "./data/B_35Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "35Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_40Hz.xls",
+        "raw_data_path": "./data/B_40Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "40Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_60Hz.xls",
+        "raw_data_path": "./data/B_60Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "60Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_65Hz.xls",
+        "raw_data_path": "./data/B_65Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "65Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_70Hz.xls",
+        "raw_data_path": "./data/B_70Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "70Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_75Hz.xls",
+        "raw_data_path": "./data/B_75Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "75Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_80Hz.xls",
+        "raw_data_path": "./data/B_80Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "80Hz",
+        "fault_label": "S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "B_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/B_VS_0_40_0Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "B",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_S_B",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_20Hz.xls",
+        "raw_data_path": "./data/C_20Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "20Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_25Hz.xls",
+        "raw_data_path": "./data/C_25Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "25Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_30Hz.xls",
+        "raw_data_path": "./data/C_30Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "30Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_35Hz.xls",
+        "raw_data_path": "./data/C_35Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "35Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_40Hz.xls",
+        "raw_data_path": "./data/C_40Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "40Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_60Hz.xls",
+        "raw_data_path": "./data/C_60Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "60Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_65Hz.xls",
+        "raw_data_path": "./data/C_65Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "65Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_70Hz.xls",
+        "raw_data_path": "./data/C_70Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "70Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_75Hz.xls",
+        "raw_data_path": "./data/C_75Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "75Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_80Hz.xls",
+        "raw_data_path": "./data/C_80Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "80Hz",
+        "fault_label": "S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "C_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/C_VS_0_40_0Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "C",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_S_C",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_20Hz.xls",
+        "raw_data_path": "./data/H_20Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "20Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_25hz.xls",
+        "raw_data_path": "./data/H_25hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "25hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_30Hz.xls",
+        "raw_data_path": "./data/H_30Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "30Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_35Hz.xls",
+        "raw_data_path": "./data/H_35Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "35Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_40Hz.xls",
+        "raw_data_path": "./data/H_40Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "40Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_60Hz.xls",
+        "raw_data_path": "./data/H_60Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "60Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_65Hz.xls",
+        "raw_data_path": "./data/H_65Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "65Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_70Hz.xls",
+        "raw_data_path": "./data/H_70Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "70Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_75Hz.xls",
+        "raw_data_path": "./data/H_75Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "75Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_80Hz.xls",
+        "raw_data_path": "./data/H_80Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "80Hz",
+        "fault_label": "H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "H_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/H_VS_0_40_0Hz.xls",
+        "fault_severity": null,
+        "fault_location": "H",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_H",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_20Hz.xls",
+        "raw_data_path": "./data/I_20Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "20Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_25Hz.xls",
+        "raw_data_path": "./data/I_25Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "25Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_30Hz.xls",
+        "raw_data_path": "./data/I_30Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "30Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_35Hz.xls",
+        "raw_data_path": "./data/I_35Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "35Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_40Hz.xls",
+        "raw_data_path": "./data/I_40Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "40Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_60Hz.xls",
+        "raw_data_path": "./data/I_60Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "60Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_65Hz.xls",
+        "raw_data_path": "./data/I_65Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "65Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_70Hz.xls",
+        "raw_data_path": "./data/I_70Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "70Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_75Hz.xls",
+        "raw_data_path": "./data/I_75Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "75Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_80Hz.xls",
+        "raw_data_path": "./data/I_80Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "80Hz",
+        "fault_label": "S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "I_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/I_VS_0_40_0Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "I",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_S_I",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_20Hz.xls",
+        "raw_data_path": "./data/O_20Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "20Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_25Hz.xls",
+        "raw_data_path": "./data/O_25Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "25Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_30Hz.xls",
+        "raw_data_path": "./data/O_30Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "30Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_35Hz.xls",
+        "raw_data_path": "./data/O_35Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "35Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_40Hz.xls",
+        "raw_data_path": "./data/O_40Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "40Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_60Hz.xls",
+        "raw_data_path": "./data/O_60Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "60Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_65Hz.xls",
+        "raw_data_path": "./data/O_65Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "65Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_70Hz.xls",
+        "raw_data_path": "./data/O_70Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "70Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_75Hz.xls",
+        "raw_data_path": "./data/O_75Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "75Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_80Hz.xls",
+        "raw_data_path": "./data/O_80Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "80Hz",
+        "fault_label": "S_O",
+        "sampling_freq_khz": 25.6
+    },
+    {
+        "raw_filename": "O_VS_0_40_0Hz.xls",
+        "raw_data_path": "./data/O_VS_0_40_0Hz.xls",
+        "fault_severity": "severe",
+        "fault_location": "O",
+        "bearing_speed": "VS",
+        "fault_label": "0_40_0Hz_S_O",
+        "sampling_freq_khz": 25.6
+    }
+]

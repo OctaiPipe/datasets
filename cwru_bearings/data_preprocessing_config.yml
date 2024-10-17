@@ -1,0 +1,25 @@
+name: data_preprocessing
+
+parsed_data_dir: ./data_parsed
+parsed_metadata_filename: "parsed_metadata.json"
+output_dir: ./data_preprocessed
+preprocessed_metadata_filename: "preprocessed_metadata.json"
+
+
+# specs in csv file of each bearing cycle
+index_column: "index"  # timestep column
+data_columns: ["DE_time", "FE_time"]
+
+# sequence segmentation and spectrogram specs
+preprocessing_specs:
+  # sampling frequency fs is given by sampling_freq_khz * 1000
+  sequence_length: 11500 # length of sequence in number of data points
+  sequence_stride: 345 # stride of sequence in number of data points
+  # spectrogram specs
+  hop: 54  #  = stride in the number of timesteps. Here we use 0.01s
+  mfft: 452  # n_fft = number of data points in each frame = frame size
+  # window function
+  window_fn_name: "hann"
+  window_fn_args:
+    M: 104
+  channel_first: True  # otherwise channel is on axis=1 from scipy. For PyTorch use
