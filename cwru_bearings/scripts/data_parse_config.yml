@@ -1,0 +1,4 @@
+name: data_parse
+
+raw_data_dir: ./data
+parse_output_dir: ./data_parsed

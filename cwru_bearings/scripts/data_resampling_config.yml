@@ -1,0 +1,12 @@
+name: data_resampling
+
+source_data_dir: ./data_parsed
+resampled_output_dir: ./data_resampled
+
+# resampling specs
+resampling_specs:
+  # specs in csv file of each bearing cycle
+  index_column: "index"  # timestep column
+  data_columns: ["DE_time", "FE_time"]
+  signal_duration_sec: 10.0  # CWRU dataset signals are 10 seconds long
+  target_fs_khz: 12.0
