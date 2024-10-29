@@ -1,0 +1,48 @@
+# run this step for each of the FL client
+name: data_preprocessing
+
+
+# source_data_dir: ./data_split/client_0
+# source_filepath_field: "train_data_path"
+# rawts_output_dir: ./data_rawts/client_0/train
+# rawts_output_filepath_field:  train_rawts_data_path
+# fftspectrum_output_dir: ./data_fftspectrum/client_0/train
+# fftspectrum_output_filepath_field: train_fftspectrum_data_path
+# spectrogram_output_dir: ./data_spectrogram/client_0/train
+# spectrogram_output_filepath_field: train_spectrogram_data_path
+
+source_data_dir: ./data_split
+source_filepath_field: data_path
+rawts_output_dir: ./data_rawts
+rawts_output_filepath_field: rawts_data_path
+fftspectrum_output_dir: ./data_fftspectrum
+fftspectrum_output_filepath_field: fftspectrum_data_path
+spectrogram_output_dir: ./data_spectrogram
+spectrogram_output_filepath_field: spectrogram_data_path
+
+# specs in csv file of each bearing cycle
+data_columns: ["DE_time", "FE_time"]
+
+compute_rawts: True
+compute_fft_spectrum: False
+compute_spectrogram: False
+
+rawts_specs:
+  sequence_length: 2048 # length of sequence in number of data points
+  stride: 61 # stride of sequence in number of data points
+fft_spectrum_specs:
+  fs: 12000
+  signal_is_real: True  # use rfft and returns half of the spectrum by symmetry
+  sequence_length: 4095 # length of sequence in number of data points
+  sequence_stride: 122 # stride of sequence in number of data points
+spectrogram_specs:
+  fs: 12000
+  sequence_length: 11500 # length of sequence in number of data points
+  sequence_stride: 345 # stride of sequence in number of data points
+  hop: 54  #  = stride in the number of timesteps. Here we use 0.01s
+  mfft: 452  # n_fft = number of data points in each frame = frame size
+  # window function
+  window_fn_name: "hann"
+  window_fn_args:
+    M: 104
+  channel_first: True  # otherwise channel is on axis=1 from scipy. For PyTorch use
