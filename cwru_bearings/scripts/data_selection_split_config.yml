@@ -1,0 +1,20 @@
+name: data_selection_split
+
+source_data_dir: ./data_resampled
+source_filepath_field: "resampled_data_path"
+selected_output_dir: &selected_output_dir ./data_selected 
+split_output_dir: ./data_split
+
+
+# selection specs
+selection_specs:
+  drop_48k: True
+  fault_diameters_to_keep: [null, "007", "014", "021"]
+  motor_loads_to_keep: ["0", "1", "2", "3"]
+  OR_use_6_alt_3: True
+
+split_specs:
+  fl_split_group: ["fault_diameter", "motor_load_hp"]
+  test_size: 0.2
+  gap: 10
+  random_state: 42
