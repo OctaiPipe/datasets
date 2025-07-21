@@ -24,7 +24,7 @@ pre-commit install
 |Cybersecurity| [Aposemat IoT-23](https://www.stratosphereips.org/datasets-iot23) | A labeled dataset with malicious and benign IoT network traffic ([Garcia et al. 2020](http://doi.org/10.5281/zenodo.4743746), Avast)  | 1-threat detection (malware) |
 |Cybersecurity| [Edge-IIoTset](https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot/code) | Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT Applications for Centralized and Federated Learning ([Ferrag et al. 2022](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9751703)) | 5-threats detection |
 | Environment | GECCO [2018](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/), [2019](https://www.th-koeln.de/informatik-und-ingenieurwissenschaften/gecco-challenge-2019_63244.php) | Internet of Things: Online Anomaly Detection for Drinking Water Quality (Rehbach et al. 2018, 2019) | Water quality monitoring |
-
+|Medical| [RETINA (Processed)](https://octaipipedatasets.blob.core.windows.net/retina/retina_processed.zip?sp=r&st=2025-07-21T10:50:32Z&se=2025-07-21T19:05:32Z&spr=https&sv=2024-11-04&sr=b&sig=AUb23oToFyPwyTdHsvbyXW%2Bq3m0fejshEWeY6PQe%2BnM%3D) | Retina images (Kaggle Diabetic Retinopathy competition dataset) preprocessed by binarizing the labels into Normal and Diseased. ([Yan et al. 2023]([https://arxiv.org/pdf/2205.08576))) | Medical image classification |
 
 [^*]: Seminal paper
 
